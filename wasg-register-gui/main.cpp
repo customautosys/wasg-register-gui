@@ -2,6 +2,7 @@
 #include <wx/event.h>
 #include "MainFrame.h"
 #include <wx/image.h>
+#include <wx/log.h>
 
 // Define the MainApp
 class MainApp : public wxApp
@@ -11,6 +12,8 @@ public:
     virtual ~MainApp() {}
 
     virtual bool OnInit() {
+		wxLogNull logNull;
+		
         // Add the common image handlers
         wxImage::AddHandler( new wxPNGHandler );
         wxImage::AddHandler( new wxJPEGHandler );
