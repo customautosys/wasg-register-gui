@@ -87,6 +87,14 @@ protected:
 	wxButton* registerButton;
 
 protected:
+	virtual void OnIdle(wxIdleEvent& event)
+	{
+		event.Skip();
+	}
+	virtual void OnActivate(wxActivateEvent& event)
+	{
+		event.Skip();
+	}
 	virtual void OnRegisterButtonClicked(wxCommandEvent& event)
 	{
 		event.Skip();

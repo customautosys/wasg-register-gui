@@ -128,7 +128,21 @@
 					"m_label":	"Bitmap File (256x256):",
 					"m_path":	"icon_cas.png"
 				}],
-			"m_events":	[],
+			"m_events":	[{
+					"m_eventName":	"wxEVT_IDLE",
+					"m_eventClass":	"wxIdleEvent",
+					"m_eventHandler":	"wxIdleEventHandler",
+					"m_functionNameAndSignature":	"OnIdle(wxIdleEvent& event)",
+					"m_description":	"Process a wxEVT_IDLE event",
+					"m_noBody":	false
+				}, {
+					"m_eventName":	"wxEVT_ACTIVATE",
+					"m_eventClass":	"wxActivateEvent",
+					"m_eventHandler":	"wxActivateEventHandler",
+					"m_functionNameAndSignature":	"OnActivate(wxActivateEvent& event)",
+					"m_description":	"Process a wxEVT_ACTIVATE event",
+					"m_noBody":	false
+				}],
 			"m_children":	[{
 					"m_type":	4453,
 					"proportion":	1,

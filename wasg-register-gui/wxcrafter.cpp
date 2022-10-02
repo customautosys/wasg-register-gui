@@ -226,6 +226,7 @@ MainFrameBaseClass::MainFrameBaseClass(wxWindow* parent, wxWindowID id, const wx
 	advancedOptionsGridBagSizer->AddGrowableRow(10);
 	advancedOptionsGridBagSizer->AddGrowableRow(11);
 	about = new wxPanel(optionsNotebook, wxID_ANY, wxDefaultPosition, wxDLG_UNIT(optionsNotebook, wxSize(-1,-1)), wxTAB_TRAVERSAL);
+	about->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_WINDOWFRAME));
 	optionsNotebook->AddPage(about, _("About"), false);
 
 	wxGridBagSizer* aboutGridBagSizer = new wxGridBagSizer(0, 0);
@@ -277,12 +278,16 @@ MainFrameBaseClass::MainFrameBaseClass(wxWindow* parent, wxWindowID id, const wx
 	}
 #endif
 	// Connect events
+	this->Connect(wxEVT_IDLE, wxIdleEventHandler(MainFrameBaseClass::OnIdle), NULL, this);
+	this->Connect(wxEVT_ACTIVATE, wxActivateEventHandler(MainFrameBaseClass::OnActivate), NULL, this);
 	registerButton->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(MainFrameBaseClass::OnRegisterButtonClicked), NULL, this);
 
 }
 
 MainFrameBaseClass::~MainFrameBaseClass()
 {
+	this->Disconnect(wxEVT_IDLE, wxIdleEventHandler(MainFrameBaseClass::OnIdle), NULL, this);
+	this->Disconnect(wxEVT_ACTIVATE, wxActivateEventHandler(MainFrameBaseClass::OnActivate), NULL, this);
 	registerButton->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(MainFrameBaseClass::OnRegisterButtonClicked), NULL, this);
 
 }

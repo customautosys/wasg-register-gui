@@ -3,6 +3,8 @@
 #include "wxcrafter.h"
 #include <wx/process.h>
 #include <wx/txtstrm.h>
+#include <wx/textdlg.h>
+#include <wx/object.h>
 #include <memory>
 
 class MainFrame : public MainFrameBaseClass{
@@ -11,24 +13,18 @@ class MainFrame : public MainFrameBaseClass{
 		virtual ~MainFrame();
 		bool retryRetrieveMode;
 	protected:
+		virtual void OnIdle(wxIdleEvent& event);
 		virtual void OnActivate(wxActivateEvent& event);
 		virtual void OnRegisterButtonClicked(wxCommandEvent& event);
-		virtual void ReEnableRegisterButton(wxCommandEvent& event);
-		virtual void OutputMessage(wxCommandEvent& event);
-		class RegisterThread:public wxThread{
-			public:
-				MainFrame* mainFrame;
-				wxProcess* process;
-				wxString output;
-			protected:
-				virtual void* Entry();
-				bool terminated;
-				wxInputStream* inputStream;
-				std::shared_ptr<wxTextOutputStream> outputStream;
-		};
-		std::shared_ptr<RegisterThread> registerThread;
+		wxProcess* process;
+		wxTextEntryDialog otpDialog;
+		wxString output;
+		wxString error;
+		bool terminated;
+		wxSharedPtr<wxInputStream> inputStream;
+		wxSharedPtr<wxInputStream> errorStream;
+		wxSharedPtr<wxTextOutputStream> outputStream;
 		bool sizeBugFixed;
-		wxDECLARE_EVENT_TABLE();
 };
 
 #endif // MAINFRAME_H
