@@ -2,6 +2,8 @@
 #include <wx/process.h>
 #include <wx/msgdlg.h>
 #include <wx/log.h>
+#include <wx/stdpaths.h>
+#include <wx/filename.h>
 #include <iostream>
 
 const wxString APP_TITLE=wxT("Wireless@SGX Linux Unofficial GUI Interface");
@@ -12,6 +14,7 @@ MainFrame::MainFrame(wxWindow* parent):
 	sizeBugFixed(false),
 	terminated(true),
 	otpDialog(this,wxT("Enter OTP to continue:"),APP_TITLE,wxT(""),wxOK|wxCENTRE|wxWS_EX_VALIDATE_RECURSIVELY){
+	optionsNotebook->ChangeSelection(0);
 }
 
 MainFrame::~MainFrame(){
@@ -27,7 +30,8 @@ void MainFrame::OnActivate(wxActivateEvent& event){
 
 void MainFrame::OnRegisterButtonClicked(wxCommandEvent& event){
 	GetRegisterButton()->Disable();
-	wxString cmdline=wxT("/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui/wasg-register.py ")+wxString(GetRetrieveModeOnly()->GetValue()||retryRetrieveMode?wxT("-r "):wxT(""))+GetPhoneNumber()->GetValue()+wxT(" ")+GetBirthdate()->GetValue().Format(wxT("%d%m%Y"));
+	wxFileName executableName(wxStandardPaths::Get().GetExecutablePath());
+	wxString cmdline=executableName.GetPath()+wxT("/wasg-register.py ")+wxString(GetRetrieveModeOnly()->GetValue()||retryRetrieveMode?wxT("-r "):wxT(""))+GetPhoneNumber()->GetValue()+wxT(" ")+GetBirthdate()->GetValue().Format(wxT("%d%m%Y"));
 	std::wcerr<<cmdline<<std::endl;
 	process=wxProcess::Open(cmdline);
 	terminated=false;
