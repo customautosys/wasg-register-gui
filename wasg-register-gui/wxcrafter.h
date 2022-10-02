@@ -84,6 +84,11 @@ protected:
 	wxPanel* about;
 	wxStaticBitmap* iconCas;
 	wxTextCtrl* textCas;
+	wxPanel* credentials;
+	wxStaticText* userIDLabel;
+	wxTextCtrl* userID;
+	wxStaticText* passwordLabel;
+	wxTextCtrl* password;
 	wxButton* registerButton;
 
 protected:
@@ -240,6 +245,26 @@ public:
 	wxPanel* GetAbout()
 	{
 		return about;
+	}
+	wxStaticText* GetUserIDLabel()
+	{
+		return userIDLabel;
+	}
+	wxTextCtrl* GetUserID()
+	{
+		return userID;
+	}
+	wxStaticText* GetPasswordLabel()
+	{
+		return passwordLabel;
+	}
+	wxTextCtrl* GetPassword()
+	{
+		return password;
+	}
+	wxPanel* GetCredentials()
+	{
+		return credentials;
 	}
 	wxNotebook* GetOptionsNotebook()
 	{

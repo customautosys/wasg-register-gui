@@ -70,9 +70,15 @@ void MainFrame::OnIdle(wxIdleEvent& event){
 	}
 	if(terminated){
 		if(!output.IsEmpty()){
-			std::wcerr<<"Final output: "<<output<<std::endl;
+			int userIDpos=output.find(wxT("userid = "));
+			int newlinepos=output.find(wxT("\n"),userIDpos);
+			userID->SetValue(output.SubString(userIDpos+9,newlinepos-1));
+			int passwordpos=output.find(wxT("password = "));
+			newlinepos=output.find(wxT("\n"),passwordpos);
+			password->SetValue(output.SubString(passwordpos+11,newlinepos-1));
+			credentials->Show();
+			optionsNotebook->ChangeSelection(optionsNotebook->GetPageCount()-1);
 			output.Clear();
-			std::wcerr<<"Output now: "<<output;
 		}
 		return;
 	}
@@ -85,8 +91,6 @@ void MainFrame::OnIdle(wxIdleEvent& event){
 		wxString value=otpDialog.GetValue();
 		(*outputStream)<<value<<endl;
 		std::wcerr<<value<<std::endl;
-		wxIdleEvent().RequestMore();
-		return;
 	}
 	wxIdleEvent().RequestMore();
 }

@@ -243,6 +243,32 @@ MainFrameBaseClass::MainFrameBaseClass(wxWindow* parent, wxWindowID id, const wx
 	aboutGridBagSizer->Add(textCas, wxGBPosition(1,0), wxGBSpan(1,1), wxALL|wxEXPAND, WXC_FROM_DIP(5));
 	aboutGridBagSizer->AddGrowableCol(0);
 	aboutGridBagSizer->AddGrowableRow(1);
+	credentials = new wxPanel(optionsNotebook, wxID_ANY, wxDefaultPosition, wxDLG_UNIT(optionsNotebook, wxSize(-1,-1)), wxTAB_TRAVERSAL);
+	credentials->Hide();
+	optionsNotebook->AddPage(credentials, _("Credentials"), false);
+
+	wxGridBagSizer* credentialsGridBagSizer = new wxGridBagSizer(0, 0);
+	credentials->SetSizer(credentialsGridBagSizer);
+
+	userIDLabel = new wxStaticText(credentials, wxID_ANY, _("User ID"), wxDefaultPosition, wxDLG_UNIT(credentials, wxSize(-1,-1)), 0);
+
+	credentialsGridBagSizer->Add(userIDLabel, wxGBPosition(0,0), wxGBSpan(1,1), wxALL, WXC_FROM_DIP(5));
+
+	userID = new wxTextCtrl(credentials, wxID_ANY, wxT(""), wxDefaultPosition, wxDLG_UNIT(credentials, wxSize(-1,-1)), wxTE_WORDWRAP|wxTE_READONLY|wxTE_MULTILINE);
+
+	credentialsGridBagSizer->Add(userID, wxGBPosition(0,1), wxGBSpan(1,1), wxALL|wxEXPAND, WXC_FROM_DIP(5));
+
+	passwordLabel = new wxStaticText(credentials, wxID_ANY, _("Password"), wxDefaultPosition, wxDLG_UNIT(credentials, wxSize(-1,-1)), 0);
+
+	credentialsGridBagSizer->Add(passwordLabel, wxGBPosition(1,0), wxGBSpan(1,1), wxALL, WXC_FROM_DIP(5));
+
+	password = new wxTextCtrl(credentials, wxID_ANY, wxT(""), wxDefaultPosition, wxDLG_UNIT(credentials, wxSize(-1,-1)), wxTE_WORDWRAP|wxTE_READONLY|wxTE_MULTILINE);
+
+	credentialsGridBagSizer->Add(password, wxGBPosition(1,1), wxGBSpan(1,1), wxALL|wxEXPAND, WXC_FROM_DIP(5));
+	credentialsGridBagSizer->AddGrowableCol(0);
+	credentialsGridBagSizer->AddGrowableCol(1);
+	credentialsGridBagSizer->AddGrowableRow(0);
+	credentialsGridBagSizer->AddGrowableRow(1);
 	registerButton = new wxButton(this, wxID_ANY, _("Register!"), wxDefaultPosition, wxDLG_UNIT(this, wxSize(-1,-1)), 0);
 	registerButton->SetDefault();
 
