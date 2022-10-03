@@ -4,8 +4,8 @@
     <File Name="python/wasg-register.py"/>
   </VirtualDirectory>
   <VirtualDirectory Name="admin">
-    <File Name="README"/>
-    <File Name="LICENSE"/>
+    <File Name="../README"/>
+    <File Name="../LICENSE"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>
