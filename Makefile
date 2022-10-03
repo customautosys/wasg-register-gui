@@ -9,3 +9,4 @@ clean:
 install:
 	@cp "build-Release/bin/*" "$(DESTDIR)/"
 	@cp "wasg-register-gui/python/*" "$(DESTDIR)/"
+	@chmod +x "$(DESTDIR)/*"
