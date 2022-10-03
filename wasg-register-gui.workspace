@@ -2,7 +2,7 @@
 <CodeLite_Workspace Name="wasg-register-gui" Database="" Version="10000">
   <Project Name="wasg-register-gui" Path="wasg-register-gui/wasg-register-gui.project" Active="Yes"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="yes">
+    <WorkspaceConfiguration Name="Debug" Selected="no">
       <Environment/>
       <Project Name="wasg-register-gui" ConfigName="Debug"/>
     </WorkspaceConfiguration>

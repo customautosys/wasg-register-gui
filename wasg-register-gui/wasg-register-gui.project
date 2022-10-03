@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="wasg-register-gui" Version="11000" InternalType="GUI">
+  <VirtualDirectory Name="python">
+    <File Name="python/wasg-register.py"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="admin">
+    <File Name="README"/>
+    <File Name="LICENSE"/>
+  </VirtualDirectory>
   <Description/>
   <Dependencies/>
   <Settings Type="Executable">
@@ -93,6 +100,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="snapcraft.yaml"/>
     <File Name="main.cpp"/>
     <File Name="MainFrame.cpp"/>
     <File Name="wxcrafter.cpp"/>

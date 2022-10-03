@@ -1,0 +1,36 @@
+name: wasg-register-gui
+version: 0.0.1
+summary: Wireless@SGx Linux Unofficial GUI Interface
+description: An unofficial GUI frontend for the wasg-register.py script. A community service project for our fellow Linux using Singaporeans by Custom Automated Systems ® Pte Ltd. https://customautosys.com/wasg-register-gui
+base: core18
+grade: stable
+confinement: strict
+icon: icon_cas.png
+
+parts:
+  wasg-register-gui:
+    plugin: make
+    source-type: git
+    source: https://github.com/customautosys/wasg-register-gui.git
+    build-packages:
+      - libwxgtk3.0-gtk3-dev
+      - python3
+  dump-wasg-register-gui:
+    plugin: dump
+    source: build-Release/bin
+    organize:
+      wasg-register-gui: bin/wasg-register-gui
+  dump-wasg-register-py:
+    plugin: dump
+    source: wasg-register-gui/python
+    organize:
+      wasg-register.py: bin/wasg-register.py
+  pip:
+    plugin: python
+    python-packages:
+      - pycryptodome
+      - requests
+
+apps:
+  wasg-register-gui:
+    command: bin/wasg-register-gui

@@ -80,7 +80,7 @@
 				}, {
 					"type":	"string",
 					"m_label":	"Title:",
-					"m_value":	"Wireless@SGX Linux Unofficial GUI Interface"
+					"m_value":	"Wireless@SGx Linux Unofficial GUI Interface"
 				}, {
 					"type":	"virtualFolderPicker",
 					"m_label":	"Virtual Folder:",

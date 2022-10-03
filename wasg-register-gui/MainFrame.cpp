@@ -5,7 +5,7 @@
 #include <wx/stdpaths.h>
 #include <wx/filename.h>
 
-const wxString APP_TITLE=wxT("Wireless@SGX Linux Unofficial GUI Interface");
+const wxString APP_TITLE=wxT("Wireless@SGx Linux Unofficial GUI Interface");
 
 MainFrame::MainFrame(wxWindow* parent):
 	MainFrameBaseClass(parent),
