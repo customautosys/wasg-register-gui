@@ -6,8 +6,8 @@
 ProjectName            :=wasg-register-gui
 ConfigurationName      :=Release
 WorkspaceConfiguration := $(ConfigurationName)
-WorkspacePath          :=/home/walfin/Dokumentujo/Github/wasg-register-gui
-ProjectPath            :=/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui
+WorkspacePath          :=..
+ProjectPath            :=.
 IntermediateDirectory  :=../build-$(ConfigurationName)/wasg-register-gui
 OutDir                 :=../build-$(ConfigurationName)/wasg-register-gui
 CurrentFileName        :=

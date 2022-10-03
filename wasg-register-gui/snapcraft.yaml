@@ -15,14 +15,24 @@ parts:
     build-packages:
       - libwxgtk3.0-gtk3-dev
       - python3
+    stage-packages:
+      - libwxgtk3.0-0v5
+      - python3
   dump-wasg-register-gui:
+    after:
+      - wasg-register-gui
     plugin: dump
     source: build-Release/bin
+    source-type: local
     organize:
       wasg-register-gui: bin/wasg-register-gui
   dump-wasg-register-py:
+    after:
+      - pip
+      - wasg-register-gui
     plugin: dump
     source: wasg-register-gui/python
+    source-type: local
     organize:
       wasg-register.py: bin/wasg-register.py
   pip:
