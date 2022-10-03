@@ -33,7 +33,20 @@ parts:
     python-packages:
       - pycryptodome
       - requests
+  snapcraft-preload:
+    source: https://github.com/sergiusens/snapcraft-preload.git
+    plugin: cmake
+    build-packages:
+      - on amd64:
+          - gcc-multilib
+          - g++-multilib
+    stage-packages:
+      - lib32stdc++6
 
 apps:
   wasg-register-gui:
-    command: bin/wasg-register-gui
+    command: desktop-launch $SNAP/bin/snapcraft-preload $SNAP/bin/wasg-register-gui
+    extensions:
+      - gnome-3-28
+    plugs:
+      - desktop
