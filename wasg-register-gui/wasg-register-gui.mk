@@ -92,7 +92,7 @@ PreBuild:
 ## Objects
 ##
 ../build-$(ConfigurationName)/wasg-register-gui/wxcrafter_bitmaps.cpp$(ObjectSuffix): wxcrafter_bitmaps.cpp ../build-$(ConfigurationName)/wasg-register-gui/wxcrafter_bitmaps.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui/wxcrafter_bitmaps.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/wxcrafter_bitmaps.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "./wxcrafter_bitmaps.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/wxcrafter_bitmaps.cpp$(ObjectSuffix) $(IncludePath)
 ../build-$(ConfigurationName)/wasg-register-gui/wxcrafter_bitmaps.cpp$(DependSuffix): wxcrafter_bitmaps.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/wasg-register-gui/wxcrafter_bitmaps.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/wasg-register-gui/wxcrafter_bitmaps.cpp$(DependSuffix) -MM wxcrafter_bitmaps.cpp
 
@@ -100,7 +100,7 @@ PreBuild:
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/wasg-register-gui/wxcrafter_bitmaps.cpp$(PreprocessSuffix) wxcrafter_bitmaps.cpp
 
 ../build-$(ConfigurationName)/wasg-register-gui/wxcrafter.cpp$(ObjectSuffix): wxcrafter.cpp ../build-$(ConfigurationName)/wasg-register-gui/wxcrafter.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui/wxcrafter.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/wxcrafter.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "./wxcrafter.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/wxcrafter.cpp$(ObjectSuffix) $(IncludePath)
 ../build-$(ConfigurationName)/wasg-register-gui/wxcrafter.cpp$(DependSuffix): wxcrafter.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/wasg-register-gui/wxcrafter.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/wasg-register-gui/wxcrafter.cpp$(DependSuffix) -MM wxcrafter.cpp
 
@@ -108,7 +108,7 @@ PreBuild:
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/wasg-register-gui/wxcrafter.cpp$(PreprocessSuffix) wxcrafter.cpp
 
 ../build-$(ConfigurationName)/wasg-register-gui/MainFrame.cpp$(ObjectSuffix): MainFrame.cpp ../build-$(ConfigurationName)/wasg-register-gui/MainFrame.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui/MainFrame.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/MainFrame.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "./MainFrame.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/MainFrame.cpp$(ObjectSuffix) $(IncludePath)
 ../build-$(ConfigurationName)/wasg-register-gui/MainFrame.cpp$(DependSuffix): MainFrame.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/wasg-register-gui/MainFrame.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/wasg-register-gui/MainFrame.cpp$(DependSuffix) -MM MainFrame.cpp
 
@@ -116,7 +116,7 @@ PreBuild:
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../build-$(ConfigurationName)/wasg-register-gui/MainFrame.cpp$(PreprocessSuffix) MainFrame.cpp
 
 ../build-$(ConfigurationName)/wasg-register-gui/main.cpp$(ObjectSuffix): main.cpp ../build-$(ConfigurationName)/wasg-register-gui/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "./main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 ../build-$(ConfigurationName)/wasg-register-gui/main.cpp$(DependSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../build-$(ConfigurationName)/wasg-register-gui/main.cpp$(ObjectSuffix) -MF../build-$(ConfigurationName)/wasg-register-gui/main.cpp$(DependSuffix) -MM main.cpp
 
