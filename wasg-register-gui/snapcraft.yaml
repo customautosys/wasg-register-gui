@@ -18,6 +18,16 @@ parts:
     stage-packages:
       - libwxgtk3.0-0v5
       - python3
+      - libatk-bridge2.0-0
+      - libatspi2.0-0
+      - libcairo-gobject2
+      - libepoxy0
+      - libgtk-3-0
+      - libwayland-client0
+      - libwayland-cursor0
+      - libwayland-egl1
+      - libwxgtk3.0-gtk3-0v5
+      - libxkbcommon0
   pip:
     plugin: python
     python-packages:
