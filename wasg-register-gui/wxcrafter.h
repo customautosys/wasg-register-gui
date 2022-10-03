@@ -89,6 +89,10 @@ protected:
 	wxTextCtrl* userID;
 	wxStaticText* passwordLabel;
 	wxTextCtrl* password;
+	wxStaticText* outputLabel;
+	wxTextCtrl* output;
+	wxStaticText* errorsLabel;
+	wxTextCtrl* errors;
 	wxButton* registerButton;
 
 protected:
@@ -261,6 +265,22 @@ public:
 	wxTextCtrl* GetPassword()
 	{
 		return password;
+	}
+	wxStaticText* GetOutputLabel()
+	{
+		return outputLabel;
+	}
+	wxTextCtrl* GetOutput()
+	{
+		return output;
+	}
+	wxStaticText* GetErrorsLabel()
+	{
+		return errorsLabel;
+	}
+	wxTextCtrl* GetErrors()
+	{
+		return errors;
 	}
 	wxPanel* GetCredentials()
 	{

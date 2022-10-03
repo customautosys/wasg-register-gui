@@ -199,7 +199,7 @@ MainFrameBaseClass::MainFrameBaseClass(wxWindow* parent, wxWindowID id, const wx
 
 	advancedOptionsGridBagSizer->Add(decryptionDateLabel, wxGBPosition(10,0), wxGBSpan(1,1), wxALL|wxALIGN_CENTER_VERTICAL, WXC_FROM_DIP(5));
 
-	decryptionDate = new wxDatePickerCtrl(advancedOptions, wxID_ANY, wxDefaultDateTime, wxDefaultPosition, wxDLG_UNIT(advancedOptions, wxSize(-1,-1)), wxDP_DEFAULT);
+	decryptionDate = new wxDatePickerCtrl(advancedOptions, wxID_ANY, wxDefaultDateTime, wxDefaultPosition, wxDLG_UNIT(advancedOptions, wxSize(-1,-1)), wxDP_ALLOWNONE|wxDP_DEFAULT);
 
 	advancedOptionsGridBagSizer->Add(decryptionDate, wxGBPosition(10,1), wxGBSpan(1,1), wxALL|wxEXPAND, WXC_FROM_DIP(5));
 
@@ -244,7 +244,6 @@ MainFrameBaseClass::MainFrameBaseClass(wxWindow* parent, wxWindowID id, const wx
 	aboutGridBagSizer->AddGrowableCol(0);
 	aboutGridBagSizer->AddGrowableRow(1);
 	credentials = new wxPanel(optionsNotebook, wxID_ANY, wxDefaultPosition, wxDLG_UNIT(optionsNotebook, wxSize(-1,-1)), wxTAB_TRAVERSAL);
-	credentials->Hide();
 	optionsNotebook->AddPage(credentials, _("Credentials"), false);
 
 	wxGridBagSizer* credentialsGridBagSizer = new wxGridBagSizer(0, 0);
@@ -265,10 +264,28 @@ MainFrameBaseClass::MainFrameBaseClass(wxWindow* parent, wxWindowID id, const wx
 	password = new wxTextCtrl(credentials, wxID_ANY, wxT(""), wxDefaultPosition, wxDLG_UNIT(credentials, wxSize(-1,-1)), wxTE_WORDWRAP|wxTE_READONLY|wxTE_MULTILINE);
 
 	credentialsGridBagSizer->Add(password, wxGBPosition(1,1), wxGBSpan(1,1), wxALL|wxEXPAND, WXC_FROM_DIP(5));
+
+	outputLabel = new wxStaticText(credentials, wxID_ANY, _("Output"), wxDefaultPosition, wxDLG_UNIT(credentials, wxSize(-1,-1)), 0);
+
+	credentialsGridBagSizer->Add(outputLabel, wxGBPosition(2,0), wxGBSpan(1,1), wxALL, WXC_FROM_DIP(5));
+
+	output = new wxTextCtrl(credentials, wxID_ANY, wxT(""), wxDefaultPosition, wxDLG_UNIT(credentials, wxSize(-1,-1)), wxTE_WORDWRAP|wxTE_READONLY|wxTE_MULTILINE);
+
+	credentialsGridBagSizer->Add(output, wxGBPosition(2,1), wxGBSpan(1,1), wxALL|wxEXPAND, WXC_FROM_DIP(5));
+
+	errorsLabel = new wxStaticText(credentials, wxID_ANY, _("Errors"), wxDefaultPosition, wxDLG_UNIT(credentials, wxSize(-1,-1)), 0);
+
+	credentialsGridBagSizer->Add(errorsLabel, wxGBPosition(3,0), wxGBSpan(1,1), wxALL, WXC_FROM_DIP(5));
+
+	errors = new wxTextCtrl(credentials, wxID_ANY, wxT(""), wxDefaultPosition, wxDLG_UNIT(credentials, wxSize(-1,-1)), wxTE_WORDWRAP|wxTE_READONLY|wxTE_MULTILINE);
+
+	credentialsGridBagSizer->Add(errors, wxGBPosition(3,1), wxGBSpan(1,1), wxALL|wxEXPAND, WXC_FROM_DIP(5));
 	credentialsGridBagSizer->AddGrowableCol(0);
 	credentialsGridBagSizer->AddGrowableCol(1);
 	credentialsGridBagSizer->AddGrowableRow(0);
 	credentialsGridBagSizer->AddGrowableRow(1);
+	credentialsGridBagSizer->AddGrowableRow(2);
+	credentialsGridBagSizer->AddGrowableRow(3);
 	registerButton = new wxButton(this, wxID_ANY, _("Register!"), wxDefaultPosition, wxDLG_UNIT(this, wxSize(-1,-1)), 0);
 	registerButton->SetDefault();
 

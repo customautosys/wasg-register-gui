@@ -18,9 +18,8 @@ class MainFrame : public MainFrameBaseClass{
 		virtual void OnRegisterButtonClicked(wxCommandEvent& event);
 		wxProcess* process;
 		wxTextEntryDialog otpDialog;
-		wxString output;
-		wxString error;
 		bool terminated;
+		bool otpPrompted;
 		wxSharedPtr<wxInputStream> inputStream;
 		wxSharedPtr<wxInputStream> errorStream;
 		wxSharedPtr<wxTextOutputStream> outputStream;
