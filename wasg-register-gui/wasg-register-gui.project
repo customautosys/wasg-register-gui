@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="wasg-register-gui" Version="11000" InternalType="GUI">
+  <VirtualDirectory Name="snap">
+    <VirtualDirectory Name="gui">
+      <File Name="snap/gui/wasg-register-gui.png"/>
+      <File Name="snap/gui/wasg-register-gui.desktop"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
   <VirtualDirectory Name="python">
     <File Name="python/wasg-register.py"/>
   </VirtualDirectory>

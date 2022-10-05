@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui.workspace">
-  <int Value="1" Name="m_selectedTab"/>
+  <int Value="0" Name="m_selectedTab"/>
   <wxString Value="/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -12,8 +12,8 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui/snapcraft.yaml" Name="FileName"/>
-      <int Value="30" Name="FirstVisibleLine"/>
-      <int Value="51" Name="CurrentLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -27,7 +27,14 @@
     <TabInfo>
       <wxString Value="/home/walfin/Dokumentujo/Github/wasg-register-gui/Makefile" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="12" Name="CurrentLine"/>
+      <int Value="14" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/walfin/Dokumentujo/Github/wasg-register-gui/wasg-register-gui/snap/gui/wasg-register-gui.desktop" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="1" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

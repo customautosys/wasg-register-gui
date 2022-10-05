@@ -1,0 +1,2 @@
+Exec=wasg-register-gui
+Icon=${SNAP}/meta/gui/wasg-register-gui.png
