@@ -28,24 +28,10 @@ parts:
       - libwayland-egl1
       - libwxgtk3.0-gtk3-0v5
       - libxkbcommon0
-  pip:
-    plugin: python
-    python-packages:
-      - pycryptodome
-      - requests
-  snapcraft-preload:
-    source: https://github.com/sergiusens/snapcraft-preload.git
-    plugin: cmake
-    build-packages:
-      - on amd64:
-          - gcc-multilib
-          - g++-multilib
-    stage-packages:
-      - lib32stdc++6
 
 apps:
   wasg-register-gui:
-    command: desktop-launch $SNAP/bin/snapcraft-preload $SNAP/bin/wasg-register-gui
+    command: desktop-launch $SNAP/bin/wasg-register-gui
     extensions:
       - gnome-3-28
     plugs:
