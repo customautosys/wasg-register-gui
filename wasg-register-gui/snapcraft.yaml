@@ -29,8 +29,11 @@ parts:
       - libwayland-egl1
       - libwxgtk3.0-gtk3-0v5
       - libxkbcommon0
-      - python3-pycryptodome
-      - python3-requests
+  pip:
+    plugin: python
+    python-packages:
+      - pycryptodome
+      - requests
 
 apps:
   wasg-register-gui:
