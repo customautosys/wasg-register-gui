@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="wasg-register-gui" Version="11000" InternalType="GUI">
   <VirtualDirectory Name="snap">
+    <VirtualDirectory Name="screenshots">
+      <File Name="snap/screenshots/OTP Prompt.png"/>
+      <File Name="snap/screenshots/Credentials.png"/>
+      <File Name="snap/screenshots/Basic Options.png"/>
+      <File Name="snap/screenshots/Advanced Options.png"/>
+      <File Name="snap/screenshots/About.png"/>
+    </VirtualDirectory>
     <VirtualDirectory Name="gui">
       <File Name="snap/gui/wasg-register-gui.png"/>
       <File Name="snap/gui/wasg-register-gui.desktop"/>
