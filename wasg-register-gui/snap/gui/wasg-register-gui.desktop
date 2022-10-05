@@ -5,3 +5,4 @@ Exec=wasg-register-gui
 Type=Application
 Terminal=false
 Icon=${SNAP}/meta/gui/wasg-register-gui.png
+Categories=Utility
