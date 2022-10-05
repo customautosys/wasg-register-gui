@@ -1,2 +1,7 @@
+[Desktop Entry]
+Name=Wireless@SGx Linux Unofficial GUI Interface
+Comment=An unofficial GUI frontend for the wasg-register.py script. A community service project for our fellow Linux using Singaporeans by Custom Automated Systems ® Pte Ltd. https://customautosys.com/wasg-register-gui
 Exec=wasg-register-gui
+Type=Application
+Terminal=false
 Icon=${SNAP}/meta/gui/wasg-register-gui.png
