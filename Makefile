@@ -11,5 +11,5 @@ install:
 	@cp build-Release/bin/* "$(DESTDIR)"/bin/
 	@cp wasg-register-gui/python/* "$(DESTDIR)"/bin/
 	@chmod +x "$(DESTDIR)"/bin/*
-	@pip install pycryptodome
-	@pip install requests
+	@pip3 install pycryptodome
+	@pip3 install requests

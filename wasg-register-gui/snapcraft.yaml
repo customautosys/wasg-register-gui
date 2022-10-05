@@ -29,7 +29,6 @@ parts:
       - libwayland-egl1
       - libwxgtk3.0-gtk3-0v5
       - libxkbcommon0
-      - python3-pip
 
 apps:
   wasg-register-gui:
